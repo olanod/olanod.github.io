@@ -3,16 +3,24 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#242424">
-    <title>DO</title>
+    <meta name="theme-color" content="#222">
+    <title>👨‍💻</title>
     <style>
+      :root { --color-main: #09D; --color-alt: #222; --color-white: #FEFEFE; }
       html, body, h1 { margin: 0; padding: 0; }
-      body { display: flex; flex-direction: column; min-height: 100vh; background: #fefefe; font-family: sans-serif }
-      h1 { margin: auto; color: #242424; font-size: 30vmin; }
-      a, abbr { text-decoration: none; } a { color: #08f } a:hover { text-decoration: underline }
-      footer { height: 2rem; line-height: 2rem; text-align: center; color: #08f }
+      body { display: flex; flex-direction: column; min-height: 100vh; background: #fefefe; font-family: sans-serif;
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.15) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 0, 0, 0.15) 1px, transparent 1px),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.15) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 0, 0, 0.15) 1px, transparent 1px),
+      linear-gradient(90deg, var(--color-alt) 50%, var(--color-main) 50%);
+      background-size: 60px 60px, 60px 60px, 20px 20px, 20px 20px, cover; background-position: center; }
+      h1 { margin: auto; color: var(--color-alt); font-size: 32vmin; text-indent: 4vmin; letter-spacing: 4vmin; }
+      h1::first-letter { color: var(--color-main) }
+      a, abbr { text-decoration: none; } a { color: var(--color-white) } a:hover { text-decoration: underline }
+      footer { height: 2rem; line-height: 2rem; text-align: center; color: var(--color-white) }
     </style>
-    <script>console.log('Hey there!\nYes, that\'s all, I\'m too lazy to do anything fancy right now. Stay tuned!')</script>
+    <script>console.log('Hello friend!\nYes, that\'s all for now, Stay tuned!')</script>
   </head>
   <body>
     <h1><abbr title="Daniel Olano">DO</abbr></h1>
