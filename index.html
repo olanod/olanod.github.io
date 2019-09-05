@@ -1,31 +1,78 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#222">
-    <title>👨‍💻</title>
-    <style>
-      :root { --color-main: #09D; --color-alt: #222; --color-white: #FEFEFE; }
-      html, body, h1 { margin: 0; padding: 0; }
-      body { display: flex; flex-direction: column; min-height: 100vh; background: #fefefe; font-family: sans-serif;
-      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.15) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0, 0, 0, 0.15) 1px, transparent 1px),
-      linear-gradient(0deg, rgba(0, 0, 0, 0.15) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0, 0, 0, 0.15) 1px, transparent 1px),
-      linear-gradient(90deg, var(--color-alt) 50%, var(--color-main) 50%);
-      background-size: 60px 60px, 60px 60px, 20px 20px, 20px 20px, cover; background-position: center; }
-      h1 { margin: auto; color: var(--color-alt); font-size: 32vmin; text-indent: 4vmin; letter-spacing: 4vmin; }
-      h1::first-letter { color: var(--color-main) }
-      a, abbr { text-decoration: none; } a { color: var(--color-white) } a:hover { text-decoration: underline }
-      footer { height: 2rem; line-height: 2rem; text-align: center; color: var(--color-white) }
-    </style>
-    <script>console.log('Hello friend!\nYes, that\'s all for now, Stay tuned!')</script>
-  </head>
-  <body>
-    <h1><abbr title="Daniel Olano">DO</abbr></h1>
-    <footer>
-      <small>&copy; <a href="https://github.com/olanod" rel="author">olanod</a></small>
-    </footer>
-  </body>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#222">
+	<title>👨‍💻</title>
+	<style>
+	 :root {
+		 --color-main: #09D;
+		 --color-main-light: #ACE;
+		 --color-bg: #FDFDFD;
+		 --color-title: #4D4D4D;
+		 --color-text: #222;
+		 --color-text-light: #999;
+		 --text-size: calc(0.85em + 0.3vmin);
+	 }
+	 html, body, h1 { margin: 0; padding: 0; }
+	 body {
+		 background-image:
+			 repeating-linear-gradient(-45deg, transparent, transparent 89px, var(--color-text-light) 90px),
+			 repeating-linear-gradient(45deg, transparent, transparent 89px, var(--color-text-light) 90px),
+			 repeating-linear-gradient(45deg, transparent, transparent 29px, var(--color-main-light) 30px),
+			 repeating-linear-gradient(-45deg, transparent, transparent 29px, var(--color-main-light) 30px);
+		 color: var(--color-text);
+		 display: grid;
+		 font-family: sans-serif;
+		 grid-template-areas:
+			 ". . ."
+			 ". main ."
+			 ". . ."
+			 "footer footer footer";
+		 grid-template-columns: 1fr minmax(60vw, 2fr) 4fr;
+		 grid-template-rows: 1fr minmax(min-content, 40vh) 1fr 2.5rem;
+		 min-height: 100vh;
+		 overflow-x: hidden;
+	 }
+	 main {
+		 background: rgba(0, 0, 0, 0.8);
+		 color: var(--color-bg);
+		 font-family: monospace;
+		 font-size: var(--text-size);
+		 padding: 1rem;
+		 grid-area: main;
+	 }
+	 footer {
+		 background: linear-gradient(to bottom, var(--color-text), var(--color-text) 50%, var(--color-main) 50%, var(--color-main));
+		 color: var(--color-bg);
+		 display: flex;
+		 grid-area: footer;
+		 justify-content: center;
+		 position: relative;
+		 align-items: center;
+	 }
+	 a {
+		 color: var(--color-bg);
+		 text-decoration: none;
+	 }
+	 a:hover, a:focus {
+		 text-decoration: underline;
+		 outline: none;
+	 }
+	 .color-main { color: var(--color-main); }
+	 .color-main-light { color: var(--color-main-light); }
+	</style>
+	<script>console.log('Hello friend!\nYes, that\'s all for now, Stay tuned!')</script>
+</head>
+<body>
+	<main>
+		<pre><abbr title="Daniel Olano">do</abbr><i class="color-main-light">@</i>world <i class="color-main">#</i> ls
+
+<a href="/thoughts">🤔 thoughts</a></pre>
+	</main>
+	<footer>
+		<small>&copy; <a href="https://github.com/olanod" rel="author">olanod</a></small>
+	</footer>
+</body>
 </html>
